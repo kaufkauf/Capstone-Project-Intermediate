@@ -196,8 +196,8 @@ $(document).ready(function () {
 <div id="abstract" class="section level3">
 <h3>Abstract</h3>
 <p>Despite the continuous growth of ebooks over the past decade, the publishing industry continues to fulfill a significant demand for physical, printed books. The cost of distributing print books can vary structurally based on factors such as fixed vs variable, owned vs 3PL, and other differing permutations of distribution cost models. But one significant distribution cost that is relatively constant for all publishers is the cost of freight.</p>
-<p>At Wiley, freight costs for outbound volume alone can cost millions annually in USD. Although the current methods used to model these costs have been sufficient for financial planning purposes, there is most certainly room for improvement. Previous forecasts have been derived from very basic time series modeling, but we have not yet attempted to apply machine learning to improve our accuracy.</p>
-<p>This project aims to predict the freight cost of physical book fulfillment (on both an individual shipment level and an aggregate level) by using supervised machine learning methods on a year’s worth of supply chain data. By implementing a more complex modeling approach, we hope to improve our forecasting accuracy as well as gain better visibility into the main drivers of our costs.</p>
+<p>At Wiley, freight costs for North American outbound volume alone can cost millions annually in USD. Although the current methods used to model these costs have been sufficient for financial planning purposes, there is most certainly room for improvement. Previous forecasts have been derived from very basic time series modeling, but we have not yet attempted to apply machine learning to improve our accuracy.</p>
+<p>This project aims to predict the freight cost of physical book fulfillment (on both an individual shipment level and an aggregate level) by using supervised machine learning methods on a year’s worth of supply chain data out of our North American distribution center. By implementing a more complex modeling approach, we hope to improve our forecasting accuracy as well as gain better visibility into the main drivers of our costs.</p>
 </div>
 <div id="analysis-approach" class="section level3">
 <h3>Analysis Approach</h3>
@@ -205,30 +205,30 @@ $(document).ready(function () {
 </div>
 <div id="data" class="section level3">
 <h3>Data</h3>
-<p>All supporting data is proprietary and available through Wiley’s internal systems. Since all data is stored in a proprietary database, the subset used for this analysis will be extracted to a csv file via SQL query. Although the full dataset used cannot be shared here, the variables will be listed below.</p>
-<p>The attributes of the training dataset include:</p>
+<p>All supporting data is proprietary and available through Wiley’s internal systems. Since Wiley utilizes a 3PL provider for distribution, there are a few cost-related variables that do not interface directly to the main system. For these variables, the data has been scraped from the monthly billing emails and manually uploaded to the main system. The complete subset of data used for this analysis will then be extracted to a csv file via SQL query. Although the full dataset used cannot be shared here, the variables are listed below.</p>
+<p>The attributes of the full dataset include:</p>
 <ul>
-<li>2 Product description attributes
+<li>2 Product description variables
 <ul>
 <li>Product group, product line (categorical)</li>
 </ul></li>
-<li>10 Order level attributes
+<li>10 Order level variables
 <ul>
 <li>Invoice number, order number (continuous; integer)</li>
 <li>Outbound units, outbound loose, outbound cartons, outbound pallets (continuous; integer)</li>
 <li>Unit weight, carton weight (continuous; float)</li>
 <li>Size of shipment, type of shipment (categorical)</li>
 </ul></li>
-<li>2 Customer demographic attributes
+<li>2 Customer demographic variables
 <ul>
 <li>Market outlet, customer destination (categorical)</li>
 </ul></li>
-<li>5 Transportion attributes
+<li>5 Transportion variables
 <ul>
 <li>Month of shipment (continuous; integer)</li>
 <li>Freight type, priority code, carrier code, collect y/n (categorical)</li>
 </ul></li>
-<li>1 Output Variable / Target
+<li>1 Output variable / target
 <ul>
 <li>Charge (continuous; float)</li>
 </ul></li>
