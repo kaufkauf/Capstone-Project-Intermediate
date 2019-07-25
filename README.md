@@ -1,7 +1,5 @@
-# Capstone-Project-Intermediate
-Capstone project for Intermediate Data Science Springboard Course
-
-This repository will hold all code, report, and slide deck drafts for the Intermediate Data Science Capstone Project.
+# Capstone Project - Intermediate Data Science
+This repository will hold all code, report, and slide deck drafts for the Springboard Intermediate Data Science Capstone Project.
 
 # Abstract
 Despite the continuous growth of ebooks over the past decade, the publishing industry continues to fulfill a significant demand for physical, printed books. The cost of distributing print books can vary structurally based on factors such as fixed vs variable, owned vs 3PL, and other differing permutations of distribution cost models. But one significant distribution cost that is relatively constant for all publishers is the cost of freight.
