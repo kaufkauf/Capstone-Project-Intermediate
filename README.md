@@ -2,7 +2,7 @@
 *Kimberly Kaufman, September 2019*   
 This repository will hold all code, reports, and slide deck drafts for the Springboard Intermediate Data Science Capstone Project.
 
-# Abstract
+## Abstract
 Despite the continuous growth of ebooks over the past decade, the publishing industry continues to fulfill a significant demand for physical, printed books. The cost of distributing print books can vary structurally based on factors such as fixed vs variable, owned vs 3PL, and other differing permutations of distribution cost models. But one significant distribution cost that is relatively constant for all publishers is the cost of freight.
 
 At Wiley, freight costs for North American outbound volume alone can cost millions annually in USD. Although the current methods used to model these costs have been sufficient for financial planning purposes, there is most certainly room for improvement. Previous forecasts have been derived from very basic time series modeling, but we have not yet attempted to apply machine learning to improve our accuracy.
