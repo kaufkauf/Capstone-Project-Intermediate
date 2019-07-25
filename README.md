@@ -1,4 +1,6 @@
-# Capstone Project - Intermediate Data Science
+# Predicting North American Freight Costs with Supervised Machine Learning
+## Capstone Project - Intermediate Data Science
+*Kimberly Kaufman*
 This repository will hold all code, report, and slide deck drafts for the Springboard Intermediate Data Science Capstone Project.
 
 # Abstract
