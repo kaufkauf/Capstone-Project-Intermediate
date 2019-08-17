@@ -1,4 +1,4 @@
-# Part and Parcel: *Predicting North American Freight Costs with Supervised Machine Learning*
+# Part and Parcel: Predicting North American Freight Costs with Supervised Machine Learning
 *Kimberly Kaufman*  
 *September 2019*   
 This repository will hold all code, reports, and slide deck drafts for the Springboard Intermediate Data Science Capstone Project.
