@@ -1,7 +1,7 @@
 # Part and Parcel: Predicting North American Freight Costs with Supervised Machine Learning
 *Kimberly Kaufman*  
 *September 2019*   
-This repository will hold all code, reports, and slide deck drafts for the Springboard Intermediate Data Science Capstone Project.
+This repository holds all code, reports, and slide deck drafts for the Springboard Data Science Intensive Capstone Project.
 
 ## Abstract
 Despite the continuous growth of ebooks over the past decade, the publishing industry continues to fulfill a significant demand for physical, printed books. The cost of distributing print books can vary structurally based on factors such as fixed vs variable, owned vs 3PL, and other differing permutations of distribution cost models. But one significant distribution cost that is relatively constant for all publishers is the cost of freight.
