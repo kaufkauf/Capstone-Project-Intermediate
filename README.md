@@ -16,4 +16,3 @@ This project aims to predict the freight cost of physical book fulfillment (on b
 + <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Final%20Report.html">Final Report - HTML</a>
 + <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Final%20Presentation.pptx">Final Presentation - Slide Deck</a>
 + <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Data%20Wrangling.ipynb">In-Depth Data Wrangling Walkthrough</a>
-+ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Data%20Wrangling.ipynb">In-Depth Data Wrangling Walkthrough</a>
