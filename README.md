@@ -9,3 +9,11 @@ Despite the continuous growth of ebooks over the past decade, the publishing ind
 At Wiley, freight costs for North American outbound volume alone can cost millions annually in USD. Although the current methods used to model these costs have been sufficient for financial planning purposes, there is most certainly room for improvement. Previous forecasts have been derived from very basic time series modeling, but we have not yet attempted to apply machine learning to improve our accuracy.
 
 This project aims to predict the freight cost of physical book fulfillment (on both an individual shipment level and an aggregate level) by using supervised machine learning methods on a year’s worth of supply chain data out of our North American distribution center. By implementing a more complex modeling approach, we hope to improve our forecasting accuracy as well as gain better visibility into the main drivers of our costs.
+
+## Key Files in this Repository:
+
++ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Final%20Report.ipynb">Final Report - Jupyter Notebook</a>
++ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Final%20Report.html">Final Report - HTML</a>
++ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Final%20Presentation.pptx">Final Presentation - Slide Deck</a>
++ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Data%20Wrangling.ipynb">In-Depth Data Wrangling Walkthrough</a>
++ <a href="https://github.com/kaufkauf/Capstone-Project-Intermediate/blob/master/CapstoneProjectv3%20-%20Data%20Wrangling.ipynb">In-Depth Data Wrangling Walkthrough</a>
