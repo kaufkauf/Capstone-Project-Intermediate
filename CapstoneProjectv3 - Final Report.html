@@ -13150,7 +13150,7 @@ div#notebook {
 <li>Market outlet, customer destination (categorical; object)</li>
 </ul>
 </li>
-<li>4 Transportion variables<ul>
+<li>5 Transportion variables<ul>
 <li>Ship method, freight type, priority code, carrier code, collect y/n (categorical; object)</li>
 </ul>
 </li>
@@ -14320,9 +14320,9 @@ The coefficient for TOTAL_All Shipments is 0.0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There's quite a bit of interesting information in this initial model.  We start with an R2 of 0.30 and an RMSE of 25, the latter of which we'll be aiming to improve in future models.<br>
-Our mean coefficient is a little bit higher than our median, which reflects slightly more coefficients on the positive side.  This implies more positive correlations (e.g. variables in which as those variables increase, freight cost also increases).<br>
-Our model coefficients highlight the relative importance of the variables fed into the model.  However, this model ends up being too many coefficients to reasonably interpret by eyeballing them, so we will next need to consider some more in-depth regression models that assist with variable selection and add regularization to the mix.</p>
+<p>There's quite a bit of interesting information in this initial model.  We start with an R2 of 0.30 and an RMSE of 25, the latter of which we'll be aiming to improve in future models.  R2 is a measure of the percent of the variance in the observed data that can be explained by the model--so while we aim to have a high R2, we don't want it to become so high as to indicate overfitting.  RMSE, on the other hand, is a measure of our root mean squared error, which we're aiming to minimize.  RMSE indicates the standard deviation of our residuals (i.e. difference between the predicted and observed values), which gives an overall indication of how well our model is performing overall at predicting the target variable.</p>
+<p>Our mean coefficient is a little bit higher than our median, which reflects slightly more coefficients on the positive side.  This implies more positive correlations (e.g. variables in which as those variables increase, freight cost also increases).  This makes sense, given that for the most part, an increase in any type of volume will generally result in higher freight costs.</p>
+<p>Our model coefficients highlight the relative importance of the variables fed into the model.  However, this model ends up being too many coefficients to reasonably interpret by eyeballing them, so we will next need to consider some more in-depth regression models that assist with variable selection and add regularization to the mix.</p>
 
 </div>
 </div>
@@ -14330,7 +14330,7 @@ Our model coefficients highlight the relative importance of the variables fed in
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="LASSO-Regression">LASSO Regression<a class="anchor-link" href="#LASSO-Regression">&#182;</a></h4><p>The goal of the LASSO model will primarily be assisting with variable selection.  By shrinking our less signficant coefficients to zero, we can more easily visualize and determine which variables are most signficant for our model (without sifting through the full list of them).</p>
+<h4 id="LASSO-Regression">LASSO Regression<a class="anchor-link" href="#LASSO-Regression">&#182;</a></h4><p>The goal of the LASSO <em>(least absolute shrinkage and selection operator)</em> model will primarily be assisting with variable selection.  By shrinking our less signficant coefficients to zero, we can more easily visualize and determine which variables are most signficant for our model (without sifting through the full list of them).</p>
 
 </div>
 </div>
@@ -14911,16 +14911,16 @@ Gradient Boosting forecast variance = 0.02560442943680711
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Conclusions-and-Recommendations">Conclusions and Recommendations<a class="anchor-link" href="#Conclusions-and-Recommendations">&#182;</a></h3><p>Both our EDA and ML modeling provided insight into the variables that influence and correlate with our overall freight costs--total units shipped, collect shipment flags, carrier, priority, ship method, and freight type all play a part in how much a shipment will cost.  Total units shipped appears to have the strongest relationship, especially on a seasonal/calendarized basis, but units alone cannot be used as a predictor.</p>
-<p>We also saw that the relationship between our dataset and our target variable is not entirely linear.  For this reason, ensemble methods like Random Forests and Gradient Boosting are the most effective predictors of cost.  The most optimal of these two models, in its current state, yields a root mean squared error (RMSE) of ~20, which tells us that the standard deviation of our residuals (i.e. difference between the predicted and observed values) hovers around 20 USD.  This could most certainly be improved upon.</p>
-<p>In terms of forecast variance, our Random Forest model varies from actuals by about 3.0%, and the Gradient Boosting model by about 2.5%, which is certainly an improvement over current forecasting methods--but could also be lessened even further through more fine tuning.</p>
-<p>Going forward, I would recommend forecasting with both Random Forest and Gradient Boosted models, while continuing to fine tune both the feature selection and hyperparameters of each.</p>
-<p>I would also recommend adding a few higher level variables to the initial dataset:</p>
+<p>We also saw that the relationship between our dataset and our target variable is not entirely linear.  For this reason, ensemble methods like Random Forests and Gradient Boosting are the most effective predictors of cost.  The most optimal of these two models, in its current state, yields a root mean squared error (RMSE) of ~20, which tells us that the standard deviation of our residuals (i.e. difference between the predicted and observed values) hovers around 20 USD.  This could most certainly be improved upon, but is still a much better measure of error to start with than that of a basic time series forecast.</p>
+<p>In terms of forecast variance, our Random Forest model varies from actuals by about 3.0%, and the Gradient Boosting model by about 2.5%, which is an improvement over current forecasting methods.  But again, this variance could also be lessened even further through more fine tuning.</p>
+<p>Going forward, I would recommend adding a few higher level variables to the initial dataset:</p>
 <ul>
 <li>Geographic region (continent) as a substitute for ship-to country</li>
 <li>Higher level market outlet groupings as a substitute for market outlet code.  </li>
 <li>A better shipment-level product identifier than global business, which could be derived from more unsupervised methods such as k-means clustering.  </li>
 </ul>
 <p>These additional features would give a better idea of the customer side of the equation, as well as a richer dataset overall with which to model.</p>
+<p>For modeling purposes, I would recommend ongoing forecasting with both Random Forest and Gradient Boosted models, while continuing to fine tune both the feature selection and hyperparameters of each.</p>
 
 </div>
 </div>
