@@ -13172,7 +13172,7 @@ div#notebook {
 </ul>
 </li>
 </ul>
-<p>Note that each dataset is read in as a Pandas data frame.  Our consolidated volume data frame contains 22 variables and 1,131,645 observations, whereas our freight data frame contains 7 variables and 129,822 observations.  These shapes are relatively normal for a couple of reasons: first, the freight charges have been rolled up to the invoice level whereas the volume information is at a line level detail; second, not all of our outbound volume incurs freight cost to Wiley. So, we would expect our volume data to have many more observations than our freight data.</p>
+<p>Note that each dataset is read in as a Pandas data frame.  Our consolidated volume data frame contains 23 variables and 1,131,645 observations, whereas our freight data frame contains 7 variables and 129,822 observations.  These shapes are relatively normal for a couple of reasons: first, the freight charges have been rolled up to the invoice level whereas the volume information is at a line level detail; second, not all of our outbound volume incurs freight cost to Wiley. So, we would expect our volume data to have many more observations than our freight data.</p>
 
 </div>
 </div>
@@ -14429,7 +14429,7 @@ However, this method has a slightly lower R2 and slightly higher RMSE than our b
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Ridge-Regression">Ridge Regression<a class="anchor-link" href="#Ridge-Regression">&#182;</a></h4><p>The goal of the Ridge model will be to mitigate any possible multicolinearity and perform regularization, since our current dataset has a large number of parameters due to the one-hot encoding.</p>
+<h4 id="Ridge-Regression">Ridge Regression<a class="anchor-link" href="#Ridge-Regression">&#182;</a></h4><p>The goal of the Ridge model will be to mitigate any possible multicolinearity and perform regularization, since our current dataset has a large number of variables due to the one-hot encoding.</p>
 
 </div>
 </div>
